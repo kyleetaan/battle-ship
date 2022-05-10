@@ -28,7 +28,7 @@ test('check ship sunk', () => {
     ship.hit([3,4]);
     ship.hit([5,6]);
     
-    expect(ship.isSunk()).toBe(true)
+    expect(ship.sunk).toBe(true)
     
 })
 
@@ -38,6 +38,6 @@ test('check ship should not sunk', () => {
     ship.hit([1,2]);
     ship.hit([3,4]);
     
-    expect(ship.isSunk()).toBe(false)
+    expect(ship.sunk).toBe(false)
     
 })

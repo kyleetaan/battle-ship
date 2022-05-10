@@ -53,3 +53,9 @@ test('report if all ships sunk', () => {
 
     expect(test.allShipSunk()).toBe(true);
 })
+
+// test.only('test', () => {
+//     let test = new GameBoard();
+
+//     test.test();
+// })

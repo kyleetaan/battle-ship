@@ -2,6 +2,7 @@ class Ship {
     constructor(length){
         this.length = length;
         this.alreadyHit = [];
+        this.sunk = false;
     }
 
     hit(coord) {
@@ -15,9 +16,8 @@ class Ship {
     
     isSunk(){
         if(this.alreadyHit.length >= this.length){
-            return true
+            this.sunk = true;
         }
-        return false
     }
 }
 

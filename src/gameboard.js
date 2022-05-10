@@ -1,6 +1,9 @@
+import Ship from "./ship";
+
 class GameBoard {
     constructor (){
         this.board = this.createBoard();
+        this.missedAttacks = [];
     }
 
     createBoard() {
@@ -14,6 +17,28 @@ class GameBoard {
         }
 
         return board
+    }
+
+    placeShip(coords, ship) {
+        this.board[coords[0]][coords[1]] = ship;
+    }
+
+    receiveAttack(coords) {
+        //receive coords
+        // get coords in board
+        // if x it means di pa hit so call ship hit function 
+        // if na hit na yung coord before return false tapos lalagay sa missed attacks
+        // else true 
+        // else return false
+
+        if(this.board[coords[0]][coords[1]] === 'x'){
+            ship.hit(coords);
+        }
+
+    }
+
+    allShipSunk() {
+
     }
 }
 
