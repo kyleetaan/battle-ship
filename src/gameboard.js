@@ -4,6 +4,7 @@ class GameBoard {
     constructor (){
         this.board = this.createBoard();
         this.missedAttacks = [];
+        this.shipsInBoard = [];
     }
 
     createBoard() {
@@ -21,24 +22,37 @@ class GameBoard {
 
     placeShip(coords, ship) {
         this.board[coords[0]][coords[1]] = ship;
+
+        
+        if(!this.containsObject(ship, this.shipsInBoard)) {
+            this.shipsInBoard.push(ship)
+        }
     }
 
     receiveAttack(coords) {
-        //receive coords
-        // get coords in board
-        // if x it means di pa hit so call ship hit function 
-        // if na hit na yung coord before return false tapos lalagay sa missed attacks
-        // else true 
-        // else return false
+        let ship = this.board[coords[0]][coords[1]];
 
-        if(this.board[coords[0]][coords[1]] === 'x'){
-            ship.hit(coords);
+        if(ship === 'x'){ 
+            this.missedAttacks.push(coords);
+            return false;
         }
-
+        ship.hit(coords);
+        return true;
     }
 
     allShipSunk() {
+        return this.shipsInBoard.every(ship => ship.sunk === true)
+    }
 
+    containsObject(obj, list) {
+        var i;
+        for (i = 0; i < list.length; i++) {
+            if (list[i] === obj) {
+                return true;
+            }
+        }
+    
+        return false;
     }
 }
 
