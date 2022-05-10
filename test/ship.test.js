@@ -7,15 +7,19 @@ test('check ship length', () => {
     
 })
 
-// test.only('check if body is being filled', () => {
-//     let ship = new Ship(3);
 
-//     ship.coords([1,1]);
-//     ship.coords([1,2]);
-//     ship.coords([1,3]);
+test('check if ship part is hit', () => {
+    let ship = new Ship(3);
 
-//     expect(ship.body).toBe([[1,1],[1,2],[1,3]]);
-// })
+    expect(ship.hit([1,2])).toBe(true)
+})
+
+test('check if ship part is already hit then attack is not valid', () => {
+    let ship = new Ship(3);
+    ship.hit([1,2]);
+
+    expect(ship.hit([1,2])).toBe(false)
+})
 
 test('check ship sunk', () => {
     let ship = new Ship(3);
