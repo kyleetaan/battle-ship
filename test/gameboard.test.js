@@ -1,5 +1,5 @@
-import GameBoard from "../src/gameboard";
-import Ship from "../src/ship";
+import GameBoard from "../src/factories/gameboard";
+import Ship from "../src/factories/ship";
 
 
 test('receive attack', () => {

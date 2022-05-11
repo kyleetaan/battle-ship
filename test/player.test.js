@@ -1,6 +1,6 @@
-import Player from "../src/player";
-import GameBoard from "../src/gameboard"
-import Ship from "../src/ship"
+import Player from "../src/factories/player";
+import GameBoard from "../src/factories/gameboard"
+import Ship from "../src/factories/ship"
 
 
 

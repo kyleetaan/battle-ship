@@ -1,4 +1,4 @@
-import Ship from "../src/ship";
+import Ship from "../src/factories/ship";
 
 test('check ship length', () => {
     let ship = new Ship(3);
