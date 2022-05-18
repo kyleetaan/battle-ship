@@ -1,3 +1,3 @@
-import wasup from "./test";
+import gameController from "./modules/game-controller";
 
-wasup()
+gameController()

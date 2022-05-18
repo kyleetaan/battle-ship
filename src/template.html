@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="bundle.js"></script>
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    
+    <div id="modal">
+        <div>Place your ships!</div>
+        <div id="table-human"></div>
+        <div id="buttons-to-click">
+            <button id="random">random</button>
+            <p>randomise</p>
+            <button id="play">play</button>
+        </div>
+    </div>
+    <div id="header">Battleship</div>
+    <div id="main">
+        <div id="table-holder">
+            <div id="table-human"></div>
+            <div id="table-comp"></div>
+        </div>
+        
+    </div>
+    <div id="footer">2022 @kyleetaan ~theodinproject~</div>
 </body>
 </html>
