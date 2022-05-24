@@ -1,3 +1,4 @@
-import gameController from "./modules/game-controller";
+import setup from "./modules/setupShip";
+import gameController from "./modules/game-controller"
 
-gameController()
+gameController();

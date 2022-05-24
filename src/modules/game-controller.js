@@ -2,8 +2,10 @@ import {fillBoard} from "./dom";
 import GameBoard from "../factories/gameboard";
 import Ship from "../factories/ship";
 import Player from "../factories/player";
+import setup from "./setupShip";
 
-function gameController() {
+function gameController() {  // main loop and game logics here
+    const shipCoords = setup();
     const player = new Player();
     const comp = new Player();
     const tableHuman = document.getElementById('table-human');
@@ -19,3 +21,5 @@ function gameController() {
 }
 
 export default gameController
+
+// main loop and game logics here
